@@ -1,0 +1,67 @@
+parameter_defaults:
+  EnableFencing: true
+  FencingConfig:
+    devices:
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:de:95:20
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6234'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:59:70:fe
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6231'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:85:fd:c5
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6232'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:3c:cc:22
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6235'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:7a:74:b2
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6233'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:7e:ff:91
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6236'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator
+    - agent: fence_ipmilan
+      host_mac: 52:54:00:ec:5b:3a
+      params:
+        ipaddr: 192.168.1.1
+        ipport: '6239'
+        lanplus: true
+        login: admin
+        passwd: password
+        privlvl: administrator

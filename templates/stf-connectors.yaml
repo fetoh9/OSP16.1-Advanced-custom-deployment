@@ -1,0 +1,8 @@
+parameter_defaults:
+  CeilometerQdrPublishEvents: true
+  MetricsQdrConnectors:
+  - host: stf-default-interconnect-5671-service-telemetry.apps-crc.testing
+    port: 443
+    role: edge
+    sslProfile: sslProfile
+    verifyHostname: false

@@ -1,0 +1,110 @@
+parameter_defaults:
+  CertmongerCA: local
+  ChronyAclRules:
+  - allow 192.0.2.0/24
+  CloudName: 192.0.2.2
+  ContainerCli: podman
+  ContainerHealthcheckDisabled: false
+  ContainerImagePrepareDebug: false
+  ControlPlaneStaticRoutes: []
+  ControlVirtualInterface: br-ctlplane
+  Debug: false
+  DeploymentUser: stack
+  DockerInsecureRegistryAddress:
+  - undercloud.ctlplane.example.com
+  - 192.0.2.1
+  - 192.0.2.3
+  DockerNetworkOptions: --bip=172.31.0.1/24
+  EnablePaunch: true
+  EnableValidations: true
+  IronicAutomatedClean: false
+  IronicDefaultNetworkInterface: flat
+  IronicEnabledBiosInterfaces:
+  - ilo
+  - no-bios
+  - redfish
+  IronicEnabledBootInterfaces:
+  - ilo-pxe
+  - ipxe
+  - pxe
+  IronicEnabledDeployInterfaces:
+  - ansible
+  - direct
+  - iscsi
+  IronicEnabledHardwareTypes:
+  - idrac
+  - ilo
+  - ipmi
+  - redfish
+  IronicEnabledInspectInterfaces:
+  - idrac
+  - ilo
+  - inspector
+  - no-inspect
+  - redfish
+  IronicEnabledManagementInterfaces:
+  - fake
+  - idrac
+  - ilo
+  - ipmitool
+  - noop
+  - redfish
+  IronicEnabledNetworkInterfaces:
+  - flat
+  IronicEnabledPowerInterfaces:
+  - fake
+  - idrac
+  - ilo
+  - ipmitool
+  - redfish
+  IronicEnabledRaidInterfaces:
+  - idrac
+  - no-raid
+  IronicEnabledVendorInterfaces:
+  - idrac
+  - ipmitool
+  - no-vendor
+  IronicIPXEEnabled: true
+  IronicInspectorCollectors: default,logs
+  IronicInspectorIPXEEnabled: true
+  IronicInspectorInterface: br-ctlplane
+  IronicInspectorKernelArgs: ''
+  IronicInspectorSubnets:
+  - gateway: 192.0.2.254
+    host_routes: []
+    ip_range: 192.0.2.100,192.0.2.120
+    mtu: 1500
+    netmask: 255.255.255.0
+    tag: ctlplane-subnet
+  LocalContainerRegistry: undercloud.ctlplane.example.com
+  MasqueradeNetworks: {}
+  NeutronDnsDomain: example.com
+  NeutronPublicInterface: eth0
+  NovaSchedulerMaxAttempts: 30
+  NovajoinIpaOtp: 3Klanc3gHFX7ShW2wiV5LnVrofm0e2Ejc6yn0QUIdQmp
+  NtpServer:
+  - 0.pool.ntp.org
+  - 1.pool.ntp.org
+  - 2.pool.ntp.org
+  - 3.pool.ntp.org
+  PublicVirtualInterface: br-ctlplane
+  PythonInterpreter: /usr/bin/python3
+  SELinuxMode: enforcing
+  TimeZone: America/New_York
+  UndercloudConfigFilePath: /home/stack/undercloud.conf
+  UndercloudCtlplaneIPv6AddressMode: dhcpv6-stateless
+  UndercloudCtlplaneLocalSubnet: ctlplane-subnet
+  UndercloudCtlplaneSubnets:
+    ctlplane-subnet:
+      AllocationPools:
+      - end: 192.0.2.24
+        start: 192.0.2.5
+      DnsNameServers:
+      - 192.168.0.252
+      HostRoutes: []
+      NetworkCidr: 192.0.2.0/24
+      NetworkGateway: 192.0.2.254
+  UndercloudEnableRoutedNetworks: false
+  UndercloudHomeDir: /home/stack
+  UndercloudLocalMtu: 1500
+  UpgradeRemoveUnusedPackages: false

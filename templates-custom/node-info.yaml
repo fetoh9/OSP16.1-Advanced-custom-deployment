@@ -1,0 +1,25 @@
+parameter_defaults:
+  NetworkDeploymentActions: ['CREATE','UPDATE']
+
+  ControllerCount: 1
+  OvercloudControllerFlavor: control
+
+  ComputeInstanceHACount: 2
+  OvercloudComputeInstanceHAFlavor: compute-instance-ha
+
+  ObjectStorageCount: 1
+  OvercloudObjectStorageFlavor: swift-storage
+
+  NetworkerCount: 1
+  OvercloudNetworkerFlavor: networker
+
+  # additional settings
+
+  NovaReservedHostMemory: 1024
+  podmanPuppetProcessCount: 1
+
+  SwiftRawDisks: {"vdb": {}}
+
+  # No shared storage for InstanceHA
+  ExtraConfig:
+    tripleo::instanceha::no_shared_storage: true

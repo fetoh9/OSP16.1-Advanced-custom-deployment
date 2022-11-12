@@ -1,0 +1,10 @@
+parameter_defaults:
+  # Consistent Hostname format
+
+  ControllerHostnameFormat: overcloud-controller-%index%
+
+  ComputeInstanceHAHostnameFormat: overcloud-computeinstanceha-%index%
+
+  NetworkerHostnameFormat: overcloud-networker-%index%
+
+  ObjectStorageHostnameFormat: overcloud-objectstorage-%index%

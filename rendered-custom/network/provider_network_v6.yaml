@@ -1,0 +1,125 @@
+heat_template_version: rocky
+
+description: >
+  ProviderNetwork network definition (automatically generated).
+
+parameters:
+  # the defaults here work for static IP assignment (IPAM) only
+  ProviderNetworkNetCidr:
+    default: "192.168.3.0/24"
+    description: Cidr for the provider_network network.
+    type: string
+  ProviderNetworkNetValueSpecs:
+    default: {'provider:physical_network': 'provider_network', 'provider:network_type': 'flat'}
+    description: Value specs for the provider_network network.
+    type: json
+  ProviderNetworkNetAdminStateUp:
+    default: false
+    description: The admin state of the network.
+    type: boolean
+  ProviderNetworkNetShared:
+    default: false
+    description: Whether this network is shared across all tenants.
+    type: boolean
+  ProviderNetworkNetName:
+    default: provider_network
+    description: The name of the provider_network network.
+    type: string
+  ProviderNetworkSubnetName:
+    default: provider_network_subnet
+    description: The name of the provider_network subnet in Neutron.
+    type: string
+  ProviderNetworkAllocationPools:
+    default: [{'start': '192.168.3.4', 'end': '192.168.3.250'}]
+    description: Ip allocation pool range for the provider_network network.
+    type: json
+  IPv6AddressMode:
+    default: dhcpv6-stateful
+    description: Neutron subnet IPv6 address mode
+    type: string
+  IPv6RAMode:
+    default: dhcpv6-stateful
+    description: Neutron subnet IPv6 router advertisement mode
+    type: string
+  ProviderNetworkInterfaceDefaultRoute:
+    default: "192.168.3.1"
+    description: default route for the provider_network network
+    type: string
+  ProviderNetworkNetworkVlanID:
+    default: 70
+    description: Vlan ID for the provider_network network traffic.
+    type: number
+  ProviderNetworkRoutes:
+    default: []
+    description: >
+      Routes for the provider_network network traffic.
+      JSON route e.g. [{'destination':'10.0.0.0/16', 'nexthop':'10.0.0.1'}]
+      Routes are added to the host_routes property on the subnet in neutron
+      when the network and subnet is created.
+    type: json
+  ProviderNetworkMtu:
+    default: 1500
+    description: The maximum transmission unit (MTU) size(in bytes) that is
+      guaranteed to pass through the data path of the segments in the
+      ProviderNetwork network.
+    type: number
+  ManageNetworks:
+    default: true
+    type: boolean
+    description: >
+      Manage the network and related resources (subnets and segments) with
+      either create, update, or delete operations (depending on the stack
+      operation). Does not apply to ports which will always be managed as
+      needed. Defaults to true. For multi-stack use cases where the network
+      related resources have already been managed by a separate stack, this
+      parameter can be set to false.
+
+conditions:
+  manage_networks: {get_param: ManageNetworks}
+
+resources:
+  ProviderNetworkNetwork:
+    type: OS::Neutron::Net
+    condition: manage_networks
+    properties:
+      admin_state_up: {get_param: ProviderNetworkNetAdminStateUp}
+      name: {get_param: ProviderNetworkNetName}
+      shared: {get_param: ProviderNetworkNetShared}
+      value_specs:
+        map_merge:
+          - {get_param: ProviderNetworkNetValueSpecs}
+          - {'mtu': {get_param: ProviderNetworkMtu}}
+
+  ProviderNetworkSubnet:
+    type: OS::Neutron::Subnet
+    condition: manage_networks
+    properties:
+      ip_version: 6
+      ipv6_address_mode: {get_param: IPv6AddressMode}
+      ipv6_ra_mode: {get_param: IPv6RAMode}
+      cidr: {get_param: ProviderNetworkNetCidr}
+      name: {get_param: ProviderNetworkSubnetName}
+      network: {get_resource: ProviderNetworkNetwork}
+      allocation_pools: {get_param: ProviderNetworkAllocationPools}
+      gateway_ip: {get_param: ProviderNetworkInterfaceDefaultRoute}
+      host_routes: {get_param: ProviderNetworkRoutes}
+      # All networks have an implicit network segment when created, map this subnet to that segment.
+      segment: {get_attr: [ProviderNetworkNetwork, segments, 0, id]}
+
+
+
+outputs:
+  OS::stack_id:
+    description: provider_network network
+    value: {get_resource: ProviderNetworkNetwork}
+  network_cidrs:
+    description: List of ProviderNetwork network's subnets in CIDR notation.
+    value:
+      list_concat:
+        if:
+          - manage_networks
+          - - - {get_attr: [ProviderNetworkSubnet, cidr]}
+            -
+          - -
+              - 192.168.3.0/24
+            -

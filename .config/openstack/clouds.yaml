@@ -1,0 +1,21 @@
+clouds:
+  overcloud:
+    auth:
+      auth_url: http://10.0.0.147:5000
+      password: NaEv8B6CMANzlA7WYWa5Cbme5
+      project_domain_name: Default
+      project_name: admin
+      user_domain_name: Default
+      username: admin
+    identity_api_version: '3'
+    region_name: regionOne
+  undercloud:
+    auth:
+      auth_url: https://192.0.2.2:13000
+      password: aCsLZ6f8W0TC8JmFdFUg5EUBC
+      project_domain_name: Default
+      project_name: admin
+      user_domain_name: Default
+      username: admin
+    identity_api_version: '3'
+    region_name: regionOne

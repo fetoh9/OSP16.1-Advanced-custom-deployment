@@ -1,0 +1,810 @@
+parameter_defaults:
+  EndpointMapOverride:
+    AodhAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8042'
+      protocol: http
+      uri: http://192.0.2.3:8042
+      uri_no_suffix: http://192.0.2.3:8042
+    AodhInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8042'
+      protocol: http
+      uri: http://192.0.2.3:8042
+      uri_no_suffix: http://192.0.2.3:8042
+    AodhPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13042'
+      protocol: https
+      uri: https://192.0.2.2:13042
+      uri_no_suffix: https://192.0.2.2:13042
+    BarbicanAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9311'
+      protocol: http
+      uri: http://192.0.2.3:9311
+      uri_no_suffix: http://192.0.2.3:9311
+    BarbicanInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9311'
+      protocol: http
+      uri: http://192.0.2.3:9311
+      uri_no_suffix: http://192.0.2.3:9311
+    BarbicanPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13311'
+      protocol: https
+      uri: https://192.0.2.2:13311
+      uri_no_suffix: https://192.0.2.2:13311
+    CephDashboardInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8444'
+      protocol: https
+      uri: https://192.0.2.3:8444
+      uri_no_suffix: https://192.0.2.3:8444
+    CephGrafanaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '3100'
+      protocol: https
+      uri: https://192.0.2.3:3100
+      uri_no_suffix: https://192.0.2.3:3100
+    CephRgwAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080/swift/v1/AUTH_%(project_id)s
+      uri_no_suffix: http://192.0.2.3:8080
+    CephRgwInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080/swift/v1/AUTH_%(project_id)s
+      uri_no_suffix: http://192.0.2.3:8080
+    CephRgwPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13808'
+      protocol: https
+      uri: https://192.0.2.2:13808/swift/v1/AUTH_%(project_id)s
+      uri_no_suffix: https://192.0.2.2:13808
+    CinderAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13776'
+      protocol: https
+      uri: https://192.0.2.2:13776/v1/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13776
+    CinderV2Admin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v2/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderV2Internal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v2/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderV2Public:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13776'
+      protocol: https
+      uri: https://192.0.2.2:13776/v2/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13776
+    CinderV3Admin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v3/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderV3Internal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8776'
+      protocol: http
+      uri: http://192.0.2.3:8776/v3/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8776
+    CinderV3Public:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13776'
+      protocol: https
+      uri: https://192.0.2.2:13776/v3/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13776
+    DesignateAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9001'
+      protocol: http
+      uri: http://192.0.2.3:9001/v2
+      uri_no_suffix: http://192.0.2.3:9001
+    DesignateInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9001'
+      protocol: http
+      uri: http://192.0.2.3:9001/v2
+      uri_no_suffix: http://192.0.2.3:9001
+    DesignatePublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13001'
+      protocol: https
+      uri: https://192.0.2.2:13001/v2
+      uri_no_suffix: https://192.0.2.2:13001
+    DockerRegistryInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8787'
+      protocol: https
+      uri: https://192.0.2.3:8787
+      uri_no_suffix: https://192.0.2.3:8787
+    Ec2ApiAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8788'
+      protocol: http
+      uri: http://192.0.2.3:8788
+      uri_no_suffix: http://192.0.2.3:8788
+    Ec2ApiInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8788'
+      protocol: http
+      uri: http://192.0.2.3:8788
+      uri_no_suffix: http://192.0.2.3:8788
+    Ec2ApiPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13788'
+      protocol: https
+      uri: https://192.0.2.2:13788
+      uri_no_suffix: https://192.0.2.2:13788
+    GaneshaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '2049'
+      protocol: nfs
+      uri: nfs://192.0.2.3:2049
+      uri_no_suffix: nfs://192.0.2.3:2049
+    GlanceAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9292'
+      protocol: http
+      uri: http://192.0.2.3:9292
+      uri_no_suffix: http://192.0.2.3:9292
+    GlanceInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9292'
+      protocol: http
+      uri: http://192.0.2.3:9292
+      uri_no_suffix: http://192.0.2.3:9292
+    GlancePublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13292'
+      protocol: https
+      uri: https://192.0.2.2:13292
+      uri_no_suffix: https://192.0.2.2:13292
+    GnocchiAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8041'
+      protocol: http
+      uri: http://192.0.2.3:8041
+      uri_no_suffix: http://192.0.2.3:8041
+    GnocchiInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8041'
+      protocol: http
+      uri: http://192.0.2.3:8041
+      uri_no_suffix: http://192.0.2.3:8041
+    GnocchiPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13041'
+      protocol: https
+      uri: https://192.0.2.2:13041
+      uri_no_suffix: https://192.0.2.2:13041
+    HeatAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8004'
+      protocol: http
+      uri: http://192.0.2.3:8004/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8004
+    HeatCfnAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8000'
+      protocol: http
+      uri: http://192.0.2.3:8000/v1
+      uri_no_suffix: http://192.0.2.3:8000
+    HeatCfnInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8000'
+      protocol: http
+      uri: http://192.0.2.3:8000/v1
+      uri_no_suffix: http://192.0.2.3:8000
+    HeatCfnPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13005'
+      protocol: https
+      uri: https://192.0.2.2:13005/v1
+      uri_no_suffix: https://192.0.2.2:13005
+    HeatInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8004'
+      protocol: http
+      uri: http://192.0.2.3:8004/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8004
+    HeatPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13004'
+      protocol: https
+      uri: https://192.0.2.2:13004/v1/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13004
+    HeatUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/heat/v1/%(project_id)s
+      uri_no_suffix: https://192.0.2.2:443
+    HorizonPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/dashboard
+      uri_no_suffix: https://192.0.2.2:443
+    IronicAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '6385'
+      protocol: http
+      uri: http://192.0.2.3:6385/v1
+      uri_no_suffix: http://192.0.2.3:6385
+    IronicInspectorAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '5050'
+      protocol: http
+      uri: http://192.0.2.3:5050
+      uri_no_suffix: http://192.0.2.3:5050
+    IronicInspectorInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '5050'
+      protocol: http
+      uri: http://192.0.2.3:5050
+      uri_no_suffix: http://192.0.2.3:5050
+    IronicInspectorPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13050'
+      protocol: https
+      uri: https://192.0.2.2:13050
+      uri_no_suffix: https://192.0.2.2:13050
+    IronicInspectorUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/ironic-inspector
+      uri_no_suffix: https://192.0.2.2:443
+    IronicInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '6385'
+      protocol: http
+      uri: http://192.0.2.3:6385/v1
+      uri_no_suffix: http://192.0.2.3:6385
+    IronicPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13385'
+      protocol: https
+      uri: https://192.0.2.2:13385/v1
+      uri_no_suffix: https://192.0.2.2:13385
+    IronicUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/ironic
+      uri_no_suffix: https://192.0.2.2:443
+    KeystoneAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '35357'
+      protocol: http
+      uri: http://192.0.2.3:35357/
+      uri_no_suffix: http://192.0.2.3:35357
+    KeystoneInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '5000'
+      protocol: http
+      uri: http://192.0.2.3:5000/
+      uri_no_suffix: http://192.0.2.3:5000
+    KeystonePublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13000'
+      protocol: https
+      uri: https://192.0.2.2:13000/
+      uri_no_suffix: https://192.0.2.2:13000
+    KeystoneUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/keystone/v3
+      uri_no_suffix: https://192.0.2.2:443
+    KeystoneV3Admin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '35357'
+      protocol: http
+      uri: http://192.0.2.3:35357/v3
+      uri_no_suffix: http://192.0.2.3:35357
+    KeystoneV3Internal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '5000'
+      protocol: http
+      uri: http://192.0.2.3:5000/v3
+      uri_no_suffix: http://192.0.2.3:5000
+    KeystoneV3Public:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13000'
+      protocol: https
+      uri: https://192.0.2.2:13000/v3
+      uri_no_suffix: https://192.0.2.2:13000
+    ManilaAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8786'
+      protocol: http
+      uri: http://192.0.2.3:8786/v2/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8786
+    ManilaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8786'
+      protocol: http
+      uri: http://192.0.2.3:8786/v2/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8786
+    ManilaPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13786'
+      protocol: https
+      uri: https://192.0.2.2:13786/v2/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13786
+    ManilaV1Admin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8786'
+      protocol: http
+      uri: http://192.0.2.3:8786/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8786
+    ManilaV1Internal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8786'
+      protocol: http
+      uri: http://192.0.2.3:8786/v1/%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8786
+    ManilaV1Public:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13786'
+      protocol: https
+      uri: https://192.0.2.2:13786/v1/%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13786
+    MetricsQdrPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '5666'
+      protocol: amqp
+      uri: amqp://192.0.2.2:5666
+      uri_no_suffix: amqp://192.0.2.2:5666
+    MistralAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8989'
+      protocol: http
+      uri: http://192.0.2.3:8989/v2
+      uri_no_suffix: http://192.0.2.3:8989
+    MistralInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8989'
+      protocol: http
+      uri: http://192.0.2.3:8989/v2
+      uri_no_suffix: http://192.0.2.3:8989
+    MistralPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13989'
+      protocol: https
+      uri: https://192.0.2.2:13989/v2
+      uri_no_suffix: https://192.0.2.2:13989
+    MistralUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/mistral/v2
+      uri_no_suffix: https://192.0.2.2:443
+    MysqlCellInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '3306'
+      protocol: mysql+pymysql
+      uri: mysql+pymysql://192.0.2.3:3306
+      uri_no_suffix: mysql+pymysql://192.0.2.3:3306
+    MysqlInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '3306'
+      protocol: mysql+pymysql
+      uri: mysql+pymysql://192.0.2.3:3306
+      uri_no_suffix: mysql+pymysql://192.0.2.3:3306
+    NeutronAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9696'
+      protocol: http
+      uri: http://192.0.2.3:9696
+      uri_no_suffix: http://192.0.2.3:9696
+    NeutronInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9696'
+      protocol: http
+      uri: http://192.0.2.3:9696
+      uri_no_suffix: http://192.0.2.3:9696
+    NeutronPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13696'
+      protocol: https
+      uri: https://192.0.2.2:13696
+      uri_no_suffix: https://192.0.2.2:13696
+    NovaAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8774'
+      protocol: http
+      uri: http://192.0.2.3:8774/v2.1
+      uri_no_suffix: http://192.0.2.3:8774
+    NovaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8774'
+      protocol: http
+      uri: http://192.0.2.3:8774/v2.1
+      uri_no_suffix: http://192.0.2.3:8774
+    NovaMetadataCellInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8775'
+      protocol: https
+      uri: https://192.0.2.3:8775
+      uri_no_suffix: https://192.0.2.3:8775
+    NovaMetadataInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8775'
+      protocol: https
+      uri: https://192.0.2.3:8775
+      uri_no_suffix: https://192.0.2.3:8775
+    NovaPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13774'
+      protocol: https
+      uri: https://192.0.2.2:13774/v2.1
+      uri_no_suffix: https://192.0.2.2:13774
+    NovaUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/nova/v2.1
+      uri_no_suffix: https://192.0.2.2:443
+    NovaVNCProxyAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '6080'
+      protocol: http
+      uri: http://192.0.2.3:6080
+      uri_no_suffix: http://192.0.2.3:6080
+    NovaVNCProxyCellPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13080'
+      protocol: https
+      uri: https://192.0.2.2:13080
+      uri_no_suffix: https://192.0.2.2:13080
+    NovaVNCProxyInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '6080'
+      protocol: http
+      uri: http://192.0.2.3:6080
+      uri_no_suffix: http://192.0.2.3:6080
+    NovaVNCProxyPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13080'
+      protocol: https
+      uri: https://192.0.2.2:13080
+      uri_no_suffix: https://192.0.2.2:13080
+    NovajoinAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9090'
+      protocol: http
+      uri: http://192.0.2.3:9090/v1
+      uri_no_suffix: http://192.0.2.3:9090
+    NovajoinInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9090'
+      protocol: http
+      uri: http://192.0.2.3:9090/v1
+      uri_no_suffix: http://192.0.2.3:9090
+    NovajoinPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13090'
+      protocol: https
+      uri: https://192.0.2.2:13090/v1
+      uri_no_suffix: https://192.0.2.2:13090
+    OctaviaAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9876'
+      protocol: http
+      uri: http://192.0.2.3:9876
+      uri_no_suffix: http://192.0.2.3:9876
+    OctaviaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9876'
+      protocol: http
+      uri: http://192.0.2.3:9876
+      uri_no_suffix: http://192.0.2.3:9876
+    OctaviaPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13876'
+      protocol: https
+      uri: https://192.0.2.2:13876
+      uri_no_suffix: https://192.0.2.2:13876
+    PankoAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8977'
+      protocol: http
+      uri: http://192.0.2.3:8977
+      uri_no_suffix: http://192.0.2.3:8977
+    PankoInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8977'
+      protocol: http
+      uri: http://192.0.2.3:8977
+      uri_no_suffix: http://192.0.2.3:8977
+    PankoPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13977'
+      protocol: https
+      uri: https://192.0.2.2:13977
+      uri_no_suffix: https://192.0.2.2:13977
+    PlacementAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8778'
+      protocol: http
+      uri: http://192.0.2.3:8778/placement
+      uri_no_suffix: http://192.0.2.3:8778
+    PlacementInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8778'
+      protocol: http
+      uri: http://192.0.2.3:8778/placement
+      uri_no_suffix: http://192.0.2.3:8778
+    PlacementPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13778'
+      protocol: https
+      uri: https://192.0.2.2:13778/placement
+      uri_no_suffix: https://192.0.2.2:13778
+    SaharaAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8386'
+      protocol: http
+      uri: http://192.0.2.3:8386
+      uri_no_suffix: http://192.0.2.3:8386
+    SaharaInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8386'
+      protocol: http
+      uri: http://192.0.2.3:8386
+      uri_no_suffix: http://192.0.2.3:8386
+    SaharaPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13386'
+      protocol: https
+      uri: https://192.0.2.2:13386
+      uri_no_suffix: https://192.0.2.2:13386
+    SwiftAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080
+      uri_no_suffix: http://192.0.2.3:8080
+    SwiftInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080/v1/AUTH_%(tenant_id)s
+      uri_no_suffix: http://192.0.2.3:8080
+    SwiftPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13808'
+      protocol: https
+      uri: https://192.0.2.2:13808/v1/AUTH_%(tenant_id)s
+      uri_no_suffix: https://192.0.2.2:13808
+    SwiftS3Admin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080
+      uri_no_suffix: http://192.0.2.3:8080
+    SwiftS3Internal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8080'
+      protocol: http
+      uri: http://192.0.2.3:8080
+      uri_no_suffix: http://192.0.2.3:8080
+    SwiftS3Public:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13808'
+      protocol: https
+      uri: https://192.0.2.2:13808
+      uri_no_suffix: https://192.0.2.2:13808
+    SwiftUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: https
+      uri: https://192.0.2.2:443/swift/v1/AUTH_%(project_id)s
+      uri_no_suffix: https://192.0.2.2:443
+    ZaqarAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8888'
+      protocol: http
+      uri: http://192.0.2.3:8888
+      uri_no_suffix: http://192.0.2.3:8888
+    ZaqarInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '8888'
+      protocol: http
+      uri: http://192.0.2.3:8888
+      uri_no_suffix: http://192.0.2.3:8888
+    ZaqarPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '13888'
+      protocol: https
+      uri: https://192.0.2.2:13888
+      uri_no_suffix: https://192.0.2.2:13888
+    ZaqarWebSocketAdmin:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9000'
+      protocol: ws
+      uri: ws://192.0.2.3:9000
+      uri_no_suffix: ws://192.0.2.3:9000
+    ZaqarWebSocketInternal:
+      host: 192.0.2.3
+      host_nobrackets: 192.0.2.3
+      port: '9000'
+      protocol: ws
+      uri: ws://192.0.2.3:9000
+      uri_no_suffix: ws://192.0.2.3:9000
+    ZaqarWebSocketPublic:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '9000'
+      protocol: wss
+      uri: wss://192.0.2.2:9000
+      uri_no_suffix: wss://192.0.2.2:9000
+    ZaqarWebSocketUIConfig:
+      host: 192.0.2.2
+      host_nobrackets: 192.0.2.2
+      port: '443'
+      protocol: wss
+      uri: wss://192.0.2.2:443/zaqar
+      uri_no_suffix: wss://192.0.2.2:443
+  ExtraHostFileEntries:
+  - 192.0.2.1 undercloud.example.com undercloud
+  - 192.0.2.1 undercloud.external.example.com undercloud.external
+  - 192.0.2.1 undercloud.ctlplane.example.com undercloud.ctlplane
+  - 192.0.2.3  undercloud.ctlplane.example.com
+  - 192.0.2.2  192.0.2.2
+  GlobalConfigExtraMapData:
+    memcached_node_ips:
+    - &id001
+      - 192.0.2.1
+    oslo_messaging_notify_node_names:
+    - *id001
+    oslo_messaging_notify_password: f62alyKK8OeaSY1lI9tEZ97Ml
+    oslo_messaging_notify_port: 5672
+    oslo_messaging_notify_scheme: rabbit
+    oslo_messaging_notify_use_ssl: 'False'
+    oslo_messaging_notify_user_name: guest
+    oslo_messaging_rpc_node_names:
+    - *id001
+    oslo_messaging_rpc_password: f62alyKK8OeaSY1lI9tEZ97Ml
+    oslo_messaging_rpc_port: 5672
+    oslo_messaging_rpc_scheme: rabbit
+    oslo_messaging_rpc_use_ssl: 'False'
+    oslo_messaging_rpc_user_name: guest
